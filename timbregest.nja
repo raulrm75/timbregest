@@ -1,0 +1,30 @@
+{
+  "mainFile": "timbregest.py", 
+  "use-tabs": false, 
+  "venv": "", 
+  "relatedProjects": [], 
+  "name": "TimbreGest", 
+  "license": "", 
+  "url": "", 
+  "pythonPath": "python3", 
+  "preExecScript": "", 
+  "additional_builtins": [], 
+  "programParams": "", 
+  "indentation": 4, 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini", 
+    ".cu"
+  ], 
+  "project-type": "", 
+  "postExecScript": "", 
+  "description": ""
+}

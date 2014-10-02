@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>winTimbreGest</class>
+ <widget class="QWidget" name="winTimbreGest">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>861</width>
+    <height>594</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TimbreGest</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="maximumSize">
+      <size>
+       <width>301</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Sesiones</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QListWidget" name="listaSesiones">
+        <property name="maximumSize">
+         <size>
+          <width>161</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="btnCrearSesion">
+          <property name="maximumSize">
+           <size>
+            <width>96</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Crear sesión</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnBorrarSesion">
+          <property name="maximumSize">
+           <size>
+            <width>96</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Borrar sesión</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnLanzarAhora">
+          <property name="text">
+           <string>Lanzar ahora</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnEditarSesion">
+          <property name="maximumSize">
+           <size>
+            <width>96</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Editar sesión</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnGuardarCambios">
+          <property name="maximumSize">
+           <size>
+            <width>96</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Guardar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnDescartarCambios">
+          <property name="maximumSize">
+           <size>
+            <width>96</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Descartar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkSesionActiva">
+          <property name="text">
+           <string>Sesión activa</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btnSalir">
+        <property name="maximumSize">
+         <size>
+          <width>85</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Salir</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+     <zorder>btnSalir</zorder>
+     <zorder>listaSesiones</zorder>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="propiedadesSesion">
+     <property name="title">
+      <string>Propiedades de sesión</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QFormLayout" name="formLayout">
+        <property name="fieldGrowthPolicy">
+         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        </property>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Hora de inicio</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QTimeEdit" name="horaInicioSesion">
+          <property name="maximumSize">
+           <size>
+            <width>67</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Hora de finalización</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTimeEdit" name="horaFinalSesion">
+          <property name="maximumSize">
+           <size>
+            <width>67</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="descripcionLabel">
+          <property name="text">
+           <string>Descripción</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="txtDescripcion"/>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>&lt;b&gt;Repeticiones&lt;/b&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QCheckBox" name="chkRepetirLunes">
+            <property name="text">
+             <string>L</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRepetirMartes">
+            <property name="text">
+             <string>M</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRepetirMiercoles">
+            <property name="text">
+             <string>X</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRepetirJueves">
+            <property name="text">
+             <string>J</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRepetirViernes">
+            <property name="text">
+             <string>V</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRepetirSabado">
+            <property name="text">
+             <string>S</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkRepetirDomingo">
+            <property name="text">
+             <string>D</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>&lt;b&gt;Timbre inicial&lt;/b&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtTimbreInicial"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnCargarTimbreInicial">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnBorrarTimbreInicial">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Inicio</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="tiempoInicioTimbreInicial">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Duración</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="duracionTimbreInicial">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnPruebaTimbreInicial">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QDial" name="volumenTimbreInicial">
+          <property name="wrapping">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblVolumenTimbreInicial">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8"/>
+        </item>
+       </layout>
+      </item>
+      <item row="4" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>&lt;b&gt;Timbre final&lt;/b&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtTimbreFinal"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnCargarTimbreFinal">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnBorrarTimbreFinal">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Inicio</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="tiempoInicioTimbreFinal">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>Duración</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="duracionTimbreFinal">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnPruebaTimbreFinal">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QDial" name="volumenTimbreFinal"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblVolumenTimbreFinal">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <item>
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>&lt;b&gt;Hilo musical&lt;/b&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listaHiloMusical"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnCargarHiloMusical">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnBorrarHiloMusical">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_13">
+            <item>
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>Inicio</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="tiempoInicioHiloMusical">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>Duración</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="duracionHiloMusical">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnPruebaHiloMusical">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QDial" name="volumenHiloMusical"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblVolumenHiloMusical">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="chkModoAleatorio">
+            <property name="text">
+             <string>Modo aleatorio</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>&lt;b&gt;Melodía entre timbres&lt;/b&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="txtTimbreMelodia"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnCargarTimbreMelodia">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnBorrarTimbreMelodia">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Inicio</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="tiempoInicioTimbreMelodia">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Duración</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTimeEdit" name="duracionTimbreMelodia">
+              <property name="displayFormat">
+               <string>mm:ss</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnPruebaTimbreMelodia">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QDial" name="volumenTimbreMelodia"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblVolumenTimbreMelodia">
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+     <zorder></zorder>
+     <zorder></zorder>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
