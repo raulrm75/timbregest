@@ -1,0 +1,4 @@
+Añadir un sistema de bitácora.
+Cambiar el sistema de persistencia de JSON a SQLITE.
+Habilitar envío de correos con las alarmas.
+Cambiar el modelo de configuración de un archivo ejecutable (.py) a uno de texto que se cargue sobre la marcha.
