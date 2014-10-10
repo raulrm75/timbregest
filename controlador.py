@@ -237,6 +237,7 @@ class Controlador(object):
     def comprobar_alarmas(self):
         hora_actual = nptime.from_time(datetime.today().time())
         dia_actual = datetime.today().weekday()
+        fecha_actual = datetime.today().strftime('%d/%m/%Y')
         if self.modelo.sonar_alarma(dia_actual, hora_actual):
             reproductor = self.vista.winTimbreGest._reproductor_alarma
             reproductor.timbre = self.modelo.alarmas[dia_actual][
@@ -246,6 +247,8 @@ class Controlador(object):
             self.apagar()
         if not self.modelo.alarmas[dia_actual]:
             self.apagar()
+        if fecha_actual in configuracion.dias_libres:
+            apagar()
 
     def lanzar_sesion(self, item_actual):
         if item_actual is not None:
