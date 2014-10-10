@@ -146,17 +146,6 @@ class Controlador(object):
             form.duracionTimbreMelodia.setTime(QtCore.QTime(0, 0, 0))
             form.volumenTimbreMelodia.setValue(0)
 
-    #@property
-    #def hilo_musical(self):
-        #return self._hilo_musical
-
-    #@hilo_musical.setter
-    #def hilo_musical(self, lista):
-        #assert all(isinstance(pista, modelo.Timbre) for pista in lista)
-        #self._hilo_musical = lista
-        #form = self.vista.winTimbreGest
-        #form.listaHiloMusical.clear()
-        #form.listaHiloMusical.addItems([pista.archivo for pista in lista])
 
     @property
     def sesion(self):
@@ -268,4 +257,4 @@ class Controlador(object):
             'org.freedesktop.ConsoleKit.Manager')
         stop_method = ck_iface.get_dbus_method("Stop")
         print('Apagando el sistema por {}...'.format(msg))
-        #stop_method()
+        stop_method()

@@ -441,7 +441,7 @@ class WinTimbreGest(QtGui.QWidget, Ui_winTimbreGest):
         if self.controlador is not None:
             self.controlador.comprobar_alarmas()
         self.setWindowTitle('TimbreGest - IES Almudeyne [{}]'.format(
-            datetime.today().time().strftime('%H:%M:%S')))
+            datetime.today().strftime('%d/%m/%Y - %H:%M:%S')))
 
     @debug_slot_method(False)
     def on_prueba_timbre_inicial_stateChanged(self, nuevo, antiguo):
