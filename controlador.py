@@ -244,11 +244,11 @@ class Controlador(object):
                 hora_actual.strftime('%H:%M:%S')]
             reproductor.reproducir()
         if hora_actual.strftime('%H:%M:%S') == configuracion.hora_apagado:
-            self.apagar()
+            self.apagar('apagado ordinario')
         if not self.modelo.alarmas[dia_actual]:
-            self.apagar()
+            self.apagar('no hay alarmas definidas')
         if fecha_actual in configuracion.dias_libres:
-            apagar()
+            self.apagar('día libre')
 
     def lanzar_sesion(self, item_actual):
         if item_actual is not None:
@@ -260,10 +260,12 @@ class Controlador(object):
             reproductor.append(sesion.timbre['final'])
             reproductor.reproducir_todo()
 
-    def apagar(self):
+    def apagar(self, msg=''):
         sys_bus = dbus.SystemBus()
         ck_srv = sys_bus.get_object('org.freedesktop.ConsoleKit',
             '/org/freedesktop/ConsoleKit/Manager')
-        ck_iface = dbus.Interface(ck_srv, 'org.freedesktop.ConsoleKit.Manager')
+        ck_iface = dbus.Interface(ck_srv, 
+            'org.freedesktop.ConsoleKit.Manager')
         stop_method = ck_iface.get_dbus_method("Stop")
-        stop_method()
+        print('Apagando el sistema por {}...'.format(msg))
+        #stop_method()
